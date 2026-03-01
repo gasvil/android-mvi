@@ -1,7 +1,7 @@
 package com.example.activation.di
 
 import com.example.activation.data.repository.ActivationRepositoryImpl
-import com.example.activation.domain.repository.ActivationRepository
+import com.example.activation.data.ActivationRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

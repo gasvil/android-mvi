@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.activation.ui.LoginScreen
+import com.example.activation.screens.LoginScreen
 
 @Composable
 fun RootNavGraph() {

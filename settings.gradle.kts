@@ -23,4 +23,5 @@ rootProject.name = "MVIApplication"
 include(":app")
 include(":feature:common")
 include(":feature:activation")
-include(":feature:reports")
+include(":feature:authorization")
+include(":feature:voids")

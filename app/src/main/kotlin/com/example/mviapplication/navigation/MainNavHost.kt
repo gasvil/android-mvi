@@ -1,16 +1,14 @@
 package com.example.mviapplication.navigation
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.reports.ui.ReportsScreen
+import com.example.authorization.navigation.AUTHORIZATION_GRAPH_ROUTE
+import com.example.authorization.navigation.authorizationNavGraph
+import com.example.voids.navigation.VOID_GRAPH_ROUTE
+import com.example.voids.navigation.voidNavGraph
 
 @Composable
 fun MainNavHost(
@@ -23,24 +21,28 @@ fun MainNavHost(
         modifier = modifier
     ) {
         composable(route = BottomNavDestination.Home.route) {
-            HomeScreen()
+            val homeNavController = androidx.navigation.compose.rememberNavController()
+            NavHost(
+                navController = homeNavController,
+                startDestination = AUTHORIZATION_GRAPH_ROUTE
+            ) {
+                authorizationNavGraph(
+                    navController = homeNavController,
+                    onAuthorizationFinished = {}
+                )
+            }
         }
-        composable(route = BottomNavDestination.Reports.route) {
-            ReportsScreen()
+
+        composable(route = BottomNavDestination.Void.route) {
+            val voidNavController = androidx.navigation.compose.rememberNavController()
+            NavHost(
+                navController = voidNavController,
+                startDestination = VOID_GRAPH_ROUTE
+            ) {
+                voidNavGraph(navController = voidNavController)
+            }
         }
     }
 }
 
-@Composable
-private fun HomeScreen(modifier: Modifier = Modifier) {
-    Box(
-        modifier = modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ) {
-        Text(
-            text = "Welcome Home! 🏠",
-            style = MaterialTheme.typography.headlineMedium
-        )
-    }
-}
 

@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.activatin"
+    namespace = "com.example.activation"
     compileSdk = 35
 
     defaultConfig {

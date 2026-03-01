@@ -1,7 +1,7 @@
 package com.example.activation.ui
 
 import androidx.lifecycle.ViewModel
-import com.example.activation.domain.usecase.ActivateUseCase
+import com.example.activation.usecase.ActivateUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import org.orbitmvi.orbit.ContainerHost
 import org.orbitmvi.orbit.viewmodel.container
