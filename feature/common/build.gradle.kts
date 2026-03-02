@@ -43,6 +43,12 @@ dependencies {
     implementation(libs.datastore.preferences)
     // Desugaring — java.time support for API < 26
     coreLibraryDesugaring(libs.desugar.jdk.libs)
+    // Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.gson)
+    // OkHttp
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.logging.interceptor)
     debugImplementation(libs.androidx.compose.ui.tooling)
 }
 

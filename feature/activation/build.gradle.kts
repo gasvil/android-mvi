@@ -51,6 +51,9 @@ dependencies {
     implementation(libs.lifecycle.viewmodel.compose)
     // Desugaring — java.time support for API < 26
     coreLibraryDesugaring(libs.desugar.jdk.libs)
+    // Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.gson)
     debugImplementation(libs.androidx.compose.ui.tooling)
 }
 

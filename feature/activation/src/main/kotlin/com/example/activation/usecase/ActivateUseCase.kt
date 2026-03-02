@@ -1,7 +1,7 @@
 package com.example.activation.usecase
 
 import com.example.common.merchant.Merchant
-import com.example.activation.data.ActivationRepository
+import com.example.activation.data.repository.ActivationRepository
 import javax.inject.Inject
 
 class ActivateUseCase @Inject constructor(
